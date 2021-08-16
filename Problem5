@@ -1,0 +1,11 @@
+n = 1000000000000
+
+for i in range(20, n, 20):
+    truth = True
+    for j in range(1,20):
+        if(i%j != 0):
+            truth = False
+            break
+    if(truth):
+        print(i)
+        break
