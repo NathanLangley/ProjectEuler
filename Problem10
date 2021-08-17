@@ -1,0 +1,16 @@
+import math
+
+def isPrime(x):
+    for i in range(3, math.ceil(math.sqrt(x))+2, 2):
+        if(x%i == 0):
+            return False
+    return True
+    
+n = 2000000
+summ = 5
+for curr in range(6, n+1, 6):
+    if(isPrime(curr-1)):
+        summ+=curr-1
+    if(isPrime(curr+1)):
+        summ+=curr+1
+print(summ)
